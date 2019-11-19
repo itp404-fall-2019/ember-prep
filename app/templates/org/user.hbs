@@ -1,0 +1,10 @@
+{{#each model as |repo|}}
+  <div>
+    <a href={{repo.html_url}} target="_blank">
+      {{repo.name}}
+    </a>
+    <span>
+      ⭐️ {{repo.stargazers_count}}
+    </span>
+  </div>
+{{/each}}
