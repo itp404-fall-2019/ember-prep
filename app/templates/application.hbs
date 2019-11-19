@@ -1,5 +1,11 @@
 <h1>My Site</h1>
-
+<ul>
+  {{#each favoriteRepos.repos as |favoriteRepo|}}
+    <li>
+      {{favoriteRepo.name}}
+    </li>
+  {{/each}}
+</ul>
 <ul>
   <li>
     <LinkTo @route="index">
@@ -22,5 +28,4 @@
     </LinkTo>
   </li>
 </ul>
-
 {{outlet}}
