@@ -1,7 +1,7 @@
 <h2>Organization: {{model.organization}}</h2>
 {{#each model.users as |member|}}
   <LinkTo @route="org.user" @models={{array model.organization member.login}}>
-    <img src={{member.avatar_url}} alt={{member.login}} width="75">
+    <MemberImage @member={{member}} />
   </LinkTo>
 {{/each}}
 {{outlet}}
